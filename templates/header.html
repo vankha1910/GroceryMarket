@@ -1,5 +1,15 @@
 <div class="container">
     <div class="top-bar">
+        <button
+            toggle-target="#navbar"
+            class="top-bar__more js-toggle d-none d-lg-block"
+        >
+            <img
+                class="top-bar__more-icon"
+                src="../assets/icon/menu-toggle.svg"
+                alt=""
+            />
+        </button>
         <a href="#!" class="logo">
             <img
                 src="./assets/icon/logo.svg"
@@ -8,7 +18,37 @@
             />
             <h1 class="logo__title">grocerymart</h1>
         </a>
-        <nav class="navbar">
+        <nav id="navbar" class="navbar hide">
+            <button
+                toggle-target="#navbar"
+                class="navbar__close js-toggle d-none d-lg-block"
+            >
+                <img
+                    class="icon navbar__close-icon"
+                    src="../assets/icon/arrow-left.svg"
+                    alt=""
+                />
+            </button>
+            <div class="d-none d-md-flex nav-act">
+                <a href="#!" class="nav-btn">
+                    <img
+                        class="nav-btn__icon"
+                        src="../assets/icon/cart.svg"
+                        alt=""
+                    />
+                    <span class="nav-btn__title">Cart</span>
+                    <span class="nav-btn__qnt">3</span>
+                </a>
+                <a href="#!" class="nav-btn">
+                    <img
+                        class="nav-btn__icon"
+                        src="../assets/icon/heart.svg"
+                        alt=""
+                    />
+                    <span class="nav-btn__title">Favorite</span>
+                    <span class="nav-btn__qnt">3</span>
+                </a>
+            </div>
             <ul class="navbar__list">
                 <li class="navbar__item">
                     <a href="#!" class="navbar__link"
@@ -39,11 +79,12 @@
                 </li>
             </ul>
         </nav>
+        <div class="navbar__overlay d-none d-lg-block"></div>
         <div class="top-act">
-            <div class="top-act__group">
-                <button class="top-act__btn top-act__btn--single">
+            <div class="top-act__group top-act__group--single">
+                <button class="top-act__btn">
                     <img
-                        class="top-act__icon"
+                        class="icon top-act__icon"
                         src="./assets/icon/search.svg"
                         alt="Search icon"
                     />
@@ -51,12 +92,18 @@
             </div>
             <div class="top-act__group">
                 <button class="top-act__btn">
-                    <img class="top-act__icon" src="./assets/icon/heart.svg" />
+                    <img
+                        class="icon top-act__icon"
+                        src="./assets/icon/heart.svg"
+                    />
                     <span class="top-act__title">03</span>
                 </button>
                 <div class="top-act__separate"></div>
                 <button class="top-act__btn">
-                    <img class="top-act__icon" src="./assets/icon/cart.svg" />
+                    <img
+                        class="icon top-act__icon"
+                        src="./assets/icon/cart.svg"
+                    />
                     <span class="top-act__title">$65.54</span>
                 </button>
             </div>
