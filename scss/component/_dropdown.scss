@@ -5,6 +5,10 @@
     padding-top: 10px;
     display: none;
     width: min(1240px, 100%);
+    // @include abstracts.screen(xl) {
+
+    // }
+
     &__inner {
         --inner-padding: 30px;
         position: relative;
@@ -19,6 +23,14 @@
             left: var(--arrow-left-pos);
             translate: -50%;
         }
+        @include abstracts.screen(lg) {
+            padding: 0 40px;
+            box-shadow: none;
+        }
+        @include abstracts.screen(md) {
+            padding: 0 20px;
+            box-shadow: none;
+        }
 
         .top-menu {
             --main-column-width: 282px;
@@ -28,8 +40,26 @@
                 width: var(--main-column-width);
                 height: var(--max-inner-height);
                 overflow: auto;
+                @include abstracts.screen(lg) {
+                    width: 100%;
+                    height: auto;
+                    overflow: initial;
+                }
             }
         }
+    }
+}
+.navbar__item:hover .dropdown {
+    display: block;
+    @include abstracts.screen(lg) {
+        display: none;
+    }
+}
+.navbar__item--active .dropdown {
+    @include abstracts.screen(lg) {
+        padding-top: 0px;
+        display: block !important;
+        position: initial;
     }
 }
 .menu-column {
@@ -51,6 +81,10 @@
         line-height: 150%;
         margin-bottom: 16px;
         margin-top: 4px;
+        @include abstracts.screen(xl) {
+            margin-bottom: 12px;
+            margin-top: 10px;
+        }
     }
     &__item {
         font-size: 1.4rem;
@@ -68,6 +102,10 @@
         &:hover .sub-menu,
         &--active .sub-menu {
             display: grid;
+            @include abstracts.screen(lg) {
+                position: initial;
+                display: block !important;
+            }
         }
     }
     &__icon-1 {
@@ -83,12 +121,14 @@
         width: 24px;
         height: 24px;
     }
+    &__link {
+    }
     & + .menu-column {
         margin-top: 20px;
+        @include abstracts.screen(lg) {
+            margin-top: 0;
+        }
     }
-}
-.navbar__item:hover .dropdown {
-    display: block;
 }
 
 .sub-menu {
@@ -101,6 +141,12 @@
     overflow: auto;
     padding-left: var(--inner-padding);
     gap: var(--inner-padding);
+    @include abstracts.screen(lg) {
+        padding: 16px 0 0 0;
+        .menu-column__icon {
+            display: block;
+        }
+    }
     &--not-main {
         position: initial;
         inset: initial;
@@ -108,5 +154,11 @@
         grid-template-columns: repeat(4, 1fr);
         height: var(--max-inner-height);
         padding-left: 0;
+        @include abstracts.screen(lg) {
+            grid-template-columns: repeat(1, 1fr);
+            height: auto;
+            gap: 14px;
+            padding: 0;
+        }
     }
 }

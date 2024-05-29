@@ -82,6 +82,8 @@
         @include abstracts.screen(lg) {
             flex-direction: column;
             gap: 0;
+            overflow-y: auto;
+            height: calc(100vh - 90px);
         }
     }
     &__item {
@@ -93,7 +95,11 @@
         &:last-child {
             padding-right: 0;
         }
+        @include abstracts.screen(lg) {
+            padding: 0;
+        }
     }
+
     &__link {
         @extend %flexItemsCenter;
         gap: 6px;
