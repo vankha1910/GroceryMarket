@@ -4,23 +4,9 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>grocery market</title>
-        <link
-            rel="apple-touch-icon"
-            sizes="76x76"
-            href="./assets/favicon/android-chrome-96x96.png"
-        />
-        <link
-            rel="icon"
-            type="image/png"
-            sizes="32x32"
-            href="./assets/favicon/favicon-32x32.png"
-        />
-        <link
-            rel="icon"
-            type="image/png"
-            sizes="16x16"
-            href="./assets/favicon/favicon-16x16.png"
-        />
+        <link rel="apple-touch-icon" sizes="76x76" href="./assets/favicon/android-chrome-96x96.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon/favicon-16x16.png" />
         <link rel="manifest" href="./assets/favicon/site.webmanifest" />
         <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
         <meta name="msapplication-TileColor" content="#da532c" />
@@ -40,7 +26,25 @@
             load('#header', './templates/header.html');
         </script>
 
-        <h1>Home page 2</h1>
+        <main class="container home">
+            <section class="home__container slideshow">
+                <div class="slideshow__wrapper">
+                    <a href="#">
+                        <picture>
+                            <source media="(max-width: 767.98px)" srcset="./assets/imgs/slideshow/slideshow-1-mb.png" />
+                            <img class="slideshow__image" src="./assets/imgs/slideshow/slideshow-1.png" alt="" />
+                        </picture>
+                    </a>
+                </div>
+                <div class="slideshow__page">
+                    <span class="slideshow__num">1</span>
+                    <span class="slideshow__slider"></span>
+                    <span class="slideshow__num">5</span>
+                </div>
+            </section>
+            <section class="home__container category"></section>
+            <section class="home__container product-list"></section>
+        </main>
 
         <footer id="footer"></footer>
         <script>
