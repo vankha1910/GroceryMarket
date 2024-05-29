@@ -141,8 +141,8 @@ table {
 
 :root {
   --text-color: #1a162e;
-  --icon-color: brightness(0) saturate(100%) invert(8%) sepia(10%)
-      saturate(4042%) hue-rotate(212deg) brightness(90%) contrast(95%);
+  --icon-color: brightness(0) saturate(100%) invert(8%) sepia(10%) saturate(4042%) hue-rotate(212deg) brightness(90%)
+      contrast(95%);
 }
 
 html {
@@ -158,12 +158,14 @@ body {
 a {
   color: inherit;
   text-decoration: none;
+  cursor: pointer;
 }
 
 button {
   border: none;
   outline: none;
   background: transparent;
+  cursor: pointer;
 }
 
 button,
@@ -1656,10 +1658,16 @@ select {
     justify-content: space-between;
   }
 }
+.navbar__arrow {
+  transition: rotate 0.3s ease-in;
+}
 @media (max-width: 991.98px) {
   .navbar__arrow {
     rotate: -90deg;
   }
+}
+.navbar__item--active .navbar__arrow {
+  rotate: 0deg;
 }
 .navbar .nav-act {
   display: flex;
@@ -1847,7 +1855,7 @@ html {
     box-shadow: none;
   }
 }
-@media (max-width: 767.98px) {
+@media (max-width: 575.98px) {
   .dropdown__inner {
     padding: 0 20px;
     box-shadow: none;

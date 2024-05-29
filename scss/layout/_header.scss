@@ -117,9 +117,13 @@
         }
     }
     &__arrow {
+        transition: rotate 0.3s ease-in;
         @include abstracts.screen(lg) {
             rotate: -90deg;
         }
+    }
+    &__item--active &__arrow {
+        rotate: 0deg;
     }
     .nav-act {
         display: flex;
