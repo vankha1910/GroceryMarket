@@ -1,5 +1,5 @@
 {
     "prettier.tabWidth": 4,
-    "editor.renderWhitespace": "trailing",
+    "editor.renderWhitespace": "none",
     "prettier.printWidth": 120
 }
