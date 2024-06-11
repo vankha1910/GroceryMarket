@@ -45,3 +45,8 @@ select {
 .icon {
     filter: var(--icon-color);
 }
+.separate {
+    margin: var(--margin) 0;
+    height: 1px;
+    background: var(--separate-color);
+}
